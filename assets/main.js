@@ -1,6 +1,6 @@
 var urlEndpoint = " api.openweathermap.org"
 var apiKey = "15e8e9167d970f296eb474a29ada33f5";
-var forecasturl = "http://api.openweathermap.org/data/2.5/forecast?q=";
+var forecasturl = "//api.openweathermap.org/data/2.5/forecast?q=";
 $(document).ready(function(){
     $('#submitWeather').click(function(){
         var city = $("#city").val();
@@ -35,7 +35,7 @@ $(document).on("click",".button", function(){
     function show(data){
         return  "<h1 class='text center'>Current Weather for "+ data.city.name +", " + data.city.country + "</h1>" + 
                 "<h2>Weather: " +data.list[0].weather[0].main + "</h2>" +
-                "<h2>Description: <img src='http://openweathermap.org/img/wn/"+ data.list[0].weather[0].icon +".png'>" + data.list[0].weather[0].description + "</h2>" +
+                "<h2>Description: <img src='//openweathermap.org/img/wn/"+ data.list[0].weather[0].icon +".png' />" + data.list[0].weather[0].description + "</h2>" +
                 "<h2>Temperature: "+ data.list[0].main.temp + "&deg;F</h2>" +
                 "<h2>Wind Speed: "+ data.list[0].wind.speed + " m/s</h2>" +
                 "<h2>Pressure: "+ data.list[0].main.pressure + " hPa</h2>" +
@@ -43,31 +43,31 @@ $(document).on("click",".button", function(){
     }
     function show1(data){
         return  "<h2>" + data.list[0].dt_txt + "<h2>" +
-                "<h4> <img><img src='http://openweathermap.org/img/wn/" +  data.list[0].weather[0].icon + ".png'>" + data.list[0].weather[0].description + "</h4>" +
+                "<h4> <img src='//openweathermap.org/img/wn/" +  data.list[0].weather[0].icon + ".png' />" + data.list[0].weather[0].description + "</h4>" +
                 "<p>Temperature: "+ data.list[0].main.temp + " &deg;F" + "<p>" +
                 "<p>Humidity: "+ data.list[0].main.humidity + "%<p>" 
     };
     function show2(data){
         return  "<h2>" + data.list[8].dt_txt + "<h2>" +
-                "<h4> <img><img src='http://openweathermap.org/img/wn/" +  data.list[8].weather[0].icon + ".png'>" + data.list[8].weather[0].description + "</h4>" +
+                "<h4><img src='//openweathermap.org/img/wn/" +  data.list[8].weather[0].icon + ".png' />" + data.list[8].weather[0].description + "</h4>" +
                 "<p>Temperature: "+ data.list[8].main.temp + " &deg;F" + "<p>" +
                 "<p>Humidity: "+ data.list[8].main.humidity + "%<p>" 
     };
     function show3(data){
         return  "<h2>" + data.list[16].dt_txt + "<h2>" +
-                "<h4> <img><img src='http://openweathermap.org/img/wn/" +  data.list[16].weather[0].icon + ".png'>" + data.list[16].weather[0].description + "</h4>" +
+                "<h4><img src='//openweathermap.org/img/wn/" +  data.list[16].weather[0].icon + ".png' />" + data.list[16].weather[0].description + "</h4>" +
                 "<p>Temperature: "+ data.list[16].main.temp + " &deg;F" + "<p>" +
                 "<p>Humidity: "+ data.list[16].main.humidity + "%<p>" 
     };
     function show4(data){
         return  "<h2>" + data.list[24].dt_txt + "<h2>" +
-                "<h4> <img><img src='http://openweathermap.org/img/wn/" +  data.list[24].weather[0].icon + ".png'>" + data.list[24].weather[0].description + "</h4>" +
+                "<h4><img src='//openweathermap.org/img/wn/" +  data.list[24].weather[0].icon + ".png' />" + data.list[24].weather[0].description + "</h4>" +
                 "<p>Temperature: "+ data.list[24].main.temp + " &deg;F" + "<p>" +
                 "<p>Humidity: "+ data.list[24].main.humidity + "%<p>" 
     };
     function show5(data){
         return  "<h2>" + data.list[32].dt_txt + "<h2>" +
-                "<h4> <img><img src='http://openweathermap.org/img/wn/" +  data.list[32].weather[0].icon + ".png'>" + data.list[32].weather[0].description + "</h4>" +
+                "<h4><img src='//openweathermap.org/img/wn/" +  data.list[32].weather[0].icon + ".png' />" + data.list[32].weather[0].description + "</h4>" +
                 "<p>Temperature: "+ data.list[32].main.temp + " &deg;F" + "<p>" +
                 "<p>Humidity: "+ data.list[32].main.humidity + "%<p>" 
     };
