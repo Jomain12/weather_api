@@ -48,3 +48,7 @@ h4{
 .card-body{
     height: 429px;
 }
+
+h2 {
+    font-size: small;
+}
