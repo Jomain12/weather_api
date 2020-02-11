@@ -3,45 +3,47 @@
 <head>
     <link rel="stylesheet" href="assets/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link src="//api.openweathermap.org/data/2.5/forecast?id=524901&APPID=15e8e9167d970f296eb474a29ada33f5">
+    <link src="http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=15e8e9167d970f296eb474a29ada33f5">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="../libs/reset.css.css">
-    <script defer src="/libs/jquery-3.4.1.min.js"></script>
-    <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-<div class="container"> 
-    <div class="row">
-        <div id="myHeader">Weather Dashboard</div>
-        <h5>Search for a City:</h5>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-            </div><input class="searchBar" type="text" class="form-control" id="city" placeholder="  City,Country"  aria-label="Username" aria-describedby="basic-addon1" value="Kansas City,US"> 
-                        </input><input class="btn btn-primary" id="submitWeather" type="submit" onclick="recentCity();"/>
-                            <span id="error"style="padding: 0px 0px 0px 10px;"></span>
-        </div>
-        <div class="col-md-3" class="parentLocation" style="width: 18rem;">
-            <ul class="list-group list-group-flush" id="recentCity" >
-            </ul>
-    </div>        
-        <div class="col-md-9">
-            <div class="cardBody" id="showToday"></div>
+    <div class="container"> 
+        <div class="row">
+            <div id="myHeader">Weather Dashboard</div>
+            <h5>Search for a City:</h5>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                </div><input class="searchBar" type="text" class="form-control" id="city" placeholder="  City,Country"  aria-label="Username" aria-describedby="basic-addon1" value="Kansas City,US"> 
+                            </input><input class="btn btn-primary" id="submitWeather" type="submit" onclick="recentCity();"/>
+                                <span id="error"style="padding: 0px 0px 0px 10px;"></span>
+            </div>
+            <div class="col-md-3" class="parentLocation" style="width: 18rem;">
+                <ul class="list-group list-group-flush" id="recentCity" >
+                </ul>
+        </div>        
+            <div class="col-md-9">
+                <div class="cardBody" id="showToday"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div style="font-weight: bolder; font-size: 30px;">5 Day Forecast:</div>
+                <div class="cardBody" id="show">
+                <div class="row">
+                    <div class="col-md-2" id="firstDay"></div>
+                    <div class="col-md-2" id="secondDay"></div>
+                    <div class="col-md-2" id="thirdDay"></div>
+                    <div class="col-md-2" id="fourthDay"></div>
+                    <div class="col-md-2" id="fifthDay"></div>
+                        </div>
             </div>
         </div>
-        <div class="col-md-12">
-            <div style="font-weight: bolder; font-size: 30px;">5 Day Forecast:</div>
-            <div class="cardBody" id="show">
-            <div class="row">
-                <div class="col-md-2" id="firstDay"></div>
-                <div class="col-md-2" id="secondDay"></div>
-                <div class="col-md-2" id="thirdDay"></div>
-                <div class="col-md-2" id="fourthDay"></div>
-                <div class="col-md-2" id="fifthDay"></div>
-                    </div>
-        </div>
-    </div>
-</div>    
+    </div>   
 <script defer src="assets/main.js"></script>
 </body>
 </html>
